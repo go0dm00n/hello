@@ -27,12 +27,14 @@
     $result = $connect->query($sql);
 
     while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
-      echo "<p>
+      echo " <div>
               $row[lname] $row[fname] $row[age] $row[name]
-            </p>";
+              <a href='updatestudent.php?id=$row[student_id]'>Изменить</a>
+            </div>";
     } 
     $connect -> close();
   ?>
+  <a href='subject.php'>Предметы</a>
     
 </body>
 </html>
